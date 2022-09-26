@@ -15,7 +15,9 @@ const Tooltip = (props) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {tooltipState && <p className={`${props.direction}`}>Hello</p>}
+      {tooltipState && (
+        <p className={`Tooltip-Tip ${props.direction}`}>{props.content}</p>
+      )}
     </div>
   );
 };
