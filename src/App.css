@@ -1,31 +1,51 @@
 .App {
   display: flex;
   height: 500px;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  flex-direction: column;
+}
+
+@keyframes tooltipAnim {
+  from {
+    background-color: white;
+    color: black;
+  }
+  to {
+    background-color: black;
+    color: white;
+  }
 }
 .tooltipWrapper {
   border: 1px solid black;
   height: 50px;
   width: 50px;
 }
-
-.tooltipDirectionRight {
+.Tooltip-Tip {
   position: relative;
+  background-color: black;
+  width: max-content;
+  color: white;
+  width: 200px;
+  animation-name: tooltipAnim;
+  animation-duration: 1s;
+}
+.Tooltip-Tip.Right {
   left: 3.5rem;
 }
 
-.tooltipDirectionLeft {
-  position: relative;
-  right: 3.5rem;
+.Tooltip-Tip.Tooltip-Tip.Left {
+  right: 10.5rem;
 }
 
-.tooltipDirectionBottom {
-  position: relative;
+.Tooltip-Tip.Bottom {
   top: 3.5rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.tooltipDirectionTop {
-  position: relative;
+.Tooltip-Tip.Top {
   bottom: 3.5rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
